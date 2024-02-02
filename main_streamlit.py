@@ -34,15 +34,14 @@ header_cont = st.container()
 stat_cont = st.container()
 
 with header_cont:  # Creating a container that keep in the header and introduction
-    st.title('Credit card Fraud Detector WebApp')
+    st.title('Transaction Fraud Monitoring System')
 
     col_1, col_2 = st.columns([1, 2])
     with col_1:
         st.subheader('Introduction')
 
     with col_2:
-        st.write('''In this data science project I would be building a credit card 
-                    fraud detection model and this web app is used to show the walk through 
+        st.write('''In this project I would be building a Transaction Fraud Monitoring System and is used to show the walk through 
                     of  the project from the balancing of the dataset to the model building. 
                     out of the five models used while building the model three were used in 
                     this webapp Namely: [Decision Tree Classifier], [Random Forest 
