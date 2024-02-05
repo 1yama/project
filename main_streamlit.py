@@ -34,17 +34,17 @@ header_cont = st.container()
 stat_cont = st.container()
 
 with header_cont:  # Creating a container that keep in the header and introduction
-    st.title('Transaction Fraud Monitoring System')
+    st.title(('Transaction Fraud Monitoring System (TFMS)'))
 
     col_1, col_2 = st.columns([1, 2])
     with col_1:
         st.subheader('Introduction')
 
     with col_2:
-        st.write('''In this project I would be building a Transaction Fraud Monitoring System and is used to show the walk through 
-                    of  the project from the balancing of the dataset to the model building. 
-                    out of the five models used while building the model three were used in 
-                    this webapp Namely: [Decision Tree Classifier], [Random Forest 
+        st.write('''In this project I have build a Transaction Fraud Monitoring System. It shows the walk through 
+                    from the balancing of the dataset to the model building. 
+                    Of the five models used while building the model, three were used in 
+                    this system: [Decision Tree Classifier], [Random Forest 
                     Classifier] and [Extreme Gradient Boosting]. 
                     
       ''')
