@@ -222,4 +222,4 @@ else:
             st.sidebar.subheader(pred_val)
             st.sidebar.subheader('Valid Transaction')
     else:
-        st.sidebar.write('Click to predict')
+        st.sidebar.write('Click to Monitor')
