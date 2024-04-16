@@ -116,7 +116,7 @@ st.cache(page)
 st.sidebar.write('''
 NOTE: Values used to predict are them same as the values in the datasets.
 ''')
-st.sidebar.write("Now, Let's Get Predicting!!!!!")
+st.sidebar.write("Let's Start Monitoring!!")
 # variables in the datasets
 # Time Variable
 time = st.sidebar.slider('Time', min_value=1000.000000, max_value=200000.0000, value=1000.0000,
