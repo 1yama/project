@@ -43,7 +43,7 @@ with header_cont:  # Creating a container that keep in the header and introducti
     with col_2:
         st.write('''In this project I have build a Transaction Fraud Monitoring System. It shows the walk through 
                     from the balancing of the dataset to the model building. 
-                    Of the five models used while building the model, three were used in 
+                    Of the models used while building the model, three were used in 
                     this system: [Decision Tree Classifier], [Random Forest 
                     Classifier] and [Extreme Gradient Boosting]. 
                     
