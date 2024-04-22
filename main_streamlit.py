@@ -22,7 +22,7 @@ names = ["Admin", "Jose"]
 usernames = ["Admin", "Jose"]
 
 # Load hashed passwords
-file_path = Path("D:\").parent / "hashed_pw.pkl"
+file_path = Path("D:\\").parent / "hashed_pw.pkl"
 with file_path.open("rb") as file:
      hashed_passwords = pickle.load(file)
 
