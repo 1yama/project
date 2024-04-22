@@ -1,14 +1,56 @@
 # Imports
+import pickle
+from pathlib import Path
+
+
 import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib as plt
 import seaborn as sns
+import streamlit_authenticator as stauth
+
 # Model Building
 # imports for model algorithms and model evaluation
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 import xgboost as xgb
+
+
+# User Authentication ----------
+names = ["Admin", "Jose"]
+usernames = ["Admin", "Jose"]
+
+# Load hashed passwords
+file_path = Path("D:\").parent / "hashed_pw.pkl"
+with file_path.open("rb") as file:
+     hashed_passwords = pickle.load(file)
+
+authenticator = stauth.Authenticate(names, usernames, hashed_passwords, 
+"Login_dashboard", "1a2b3c4d", cookie_expiry_days=30)
+
+name, authentication_status, username = authenticator.login("Login", "main")
+
+if authentication_status == False:
+    st.error("Username/password is incorrect")
+
+if authentication_status == None:
+    st.warning("Please enter your username and password")
+
+
+
+
+
+     
+
+
+
+
+
+
+
+
+
 
 st.markdown(
     '''
@@ -110,6 +152,9 @@ with stat_cont:
     st.write(f'Number Classes: {len(np.unique(data_1["Class"]))}')
 
 # Side bar for predicting
+authenticator.logout("Logout", "Sidebar")
+st.sidebar.title(f"Welcome {name} )
+
 page = st.sidebar.selectbox('Select Your Model', ['Decision Tree', 'Random Forest Classifier',
                                                   'Extreme Gradient Boosting '])
 st.cache(page)
