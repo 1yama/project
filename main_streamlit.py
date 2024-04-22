@@ -1,14 +1,12 @@
 # Imports
-import pickle
-from pathlib import Path
-
-
 import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib as plt
 import seaborn as sns
 import streamlit_authenticator as stauth
+import pickle
+from pathlib import Path
 
 # Model Building
 # imports for model algorithms and model evaluation
