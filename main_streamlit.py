@@ -38,20 +38,6 @@ if authentication_status == None:
     st.warning("Please enter your username and password")
 
 
-
-
-
-     
-
-
-
-
-
-
-
-
-
-
 st.markdown(
     '''
       <style>
@@ -153,7 +139,8 @@ with stat_cont:
 
 # Side bar for predicting
 authenticator.logout("Logout", "Sidebar")
-st.sidebar.title(f"Welcome {name} )
+st.sidebar.title(f"Welcome {name}")
+
 
 page = st.sidebar.selectbox('Select Your Model', ['Decision Tree', 'Random Forest Classifier',
                                                   'Extreme Gradient Boosting '])
