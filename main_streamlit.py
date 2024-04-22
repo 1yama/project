@@ -138,10 +138,6 @@ with stat_cont:
     st.write(f'Number Classes: {len(np.unique(data_1["Class"]))}')
 
 # Side bar for predicting
-authenticator.logout("Logout", "Sidebar")
-st.sidebar.title(f"Welcome {name}")
-
-
 page = st.sidebar.selectbox('Select Your Model', ['Decision Tree', 'Random Forest Classifier',
                                                   'Extreme Gradient Boosting '])
 st.cache(page)
