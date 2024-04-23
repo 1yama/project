@@ -5,6 +5,39 @@ import numpy as np
 import pandas as pd
 import matplotlib as plt
 import seaborn as sns
+import pickle
+from streamlit_authenticator import Authenticator
+
+# Load admin credentials from file
+with open("admin_credentials.pkl", "rb") as file:
+    admin_credentials = pickle.load(file)
+
+# Initialize Authenticator
+authenticator = Authenticator(admin_credentials)
+
+# Main app logic
+def main():
+    st.title("Admin Login")
+
+    username = st.text_input("Username")
+    password = st.text_input("Password", type="password")
+
+    if st.button("Login"):
+        login_status, user_role = authenticator.login(username, password)
+
+        if login_status:
+            st.success(f"Welcome, {username}!")
+            # Add your app's main functionality here
+        else:
+            st.error("Invalid username or password. Please try again.")
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+
 
 
 
