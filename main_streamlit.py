@@ -9,7 +9,7 @@ import pickle
 from streamlit_authenticator import Authenticator
 
 # Load admin credentials from file
-with open("admin_credentials.pkl", "rb") as file:
+with open("admin_credentials.py", "rb") as file:
     admin_credentials = pickle.load(file)
 
 # Initialize Authenticator
@@ -33,12 +33,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-
-
-
 
 
 # Model Building
